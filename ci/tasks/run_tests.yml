@@ -1,0 +1,15 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: node
+    tag: latest
+
+inputs:
+  - name: game-of-life
+  - name: dependency-cache
+
+run:
+  path: game-of-life/ci/scripts/run_tests.sh
